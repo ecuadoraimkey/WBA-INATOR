@@ -15,7 +15,7 @@ std::string Checks::getPdbPath(std::string ref)
 
 	while ((pos = ref.find(".pdb")) != std::string::npos) {
 		while ((pos1 = ref.find(":\\")) != std::string::npos) {
-			token = ref.substr(pos1, pos);
+			token = ref.substr(pos1-1, pos);
 			return token;
 		}
 	}
